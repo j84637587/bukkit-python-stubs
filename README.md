@@ -10,6 +10,9 @@ These `.pyi` stubs are useful if you're:
 - Needing autocompletion and type hints for Bukkit classes in Python editors.
 - Works with [PySpigot](https://github.com/magicmq/pyspigot) to develop Minecraft plugins in Python.
 
+## Showcase
+
+![demo](demo/image.png)
 
 ## Source
 
