@@ -1,0 +1,9 @@
+from enum import Enum
+
+class CookingBookCategory(Enum):
+    """
+    Represents categories within the cooking recipe book.
+    """
+    FOOD = ...
+    BLOCKS = ...
+    MISC = ...
