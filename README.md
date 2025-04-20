@@ -17,5 +17,6 @@ These stubs are auto-generated from the 	official repository of [SpigotMC](https
 
 
 ## TODO
+- [ ] Fix Errors(missing imports, typo form gpt, etc.)
 - [ ] Support for CraftBukkit
 - [ ] Support for Spigot
