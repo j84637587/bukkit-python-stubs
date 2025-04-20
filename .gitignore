@@ -5,3 +5,6 @@ LICENSE
 README.md
 
 !org/**/*.pyi
+
+demo/
+/demo/*
