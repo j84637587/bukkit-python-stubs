@@ -43,7 +43,7 @@ class Guardian(Protocol):
         Set the amount of ticks that have elapsed since this guardian has initiated
         a laser attack. If set to get_laser_duration() or greater, the guardian
         will inflict damage upon its target and the laser attack will complete.
-        
+
         For this value to have any effect, the guardian must have an active target
         (see set_target(LivingEntity)) and be charging a laser attack (where
         has_laser() is true). The client may display a different animation of

@@ -1,5 +1,3 @@
-# org/bukkit/entity/ZombieHorse.pyi
-
 """
 Represents a ZombieHorse - variant of {@link AbstractHorse}.
 """

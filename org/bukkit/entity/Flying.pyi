@@ -1,5 +1,3 @@
-# org/bukkit/entity/Flying.pyi
-
 """
 Represents a Flying Entity.
 """

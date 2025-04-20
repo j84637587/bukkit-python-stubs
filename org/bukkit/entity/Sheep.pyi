@@ -1,5 +1,3 @@
-# org/bukkit/entity/Sheep.pyi
-
 from org.bukkit.entity import Animals
 from org.bukkit.material import Colorable
 from org.bukkit.entity import Shearable

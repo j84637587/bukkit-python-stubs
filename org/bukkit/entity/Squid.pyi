@@ -1,5 +1,3 @@
-# org/bukkit/entity/Squid.pyi
-
 from .Ageable import Ageable
 from .WaterMob import WaterMob
 

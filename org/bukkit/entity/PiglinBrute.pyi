@@ -1,5 +1,3 @@
-# org/bukkit/entity/PiglinBrute.pyi
-
 """
 Represents a Piglin Brute.
 """

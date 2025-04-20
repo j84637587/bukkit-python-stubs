@@ -1,5 +1,3 @@
-# org/bukkit/entity/Slime.pyi
-
 from typing import Protocol
 
 class Mob(Protocol):

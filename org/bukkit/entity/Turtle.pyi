@@ -1,5 +1,3 @@
-# org/bukkit/entity/Turtle.pyi
-
 from typing import Protocol
 
 class Animals(Protocol):

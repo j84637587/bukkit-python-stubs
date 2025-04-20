@@ -1,5 +1,3 @@
-# org/bukkit/entity/ThrownExpBottle.pyi
-
 """
 Represents a thrown Experience bottle.
 """

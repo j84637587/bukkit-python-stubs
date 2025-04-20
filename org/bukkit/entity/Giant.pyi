@@ -1,5 +1,3 @@
-# org/bukkit/entity/Giant.pyi
-
 """
 Represents a Giant.
 """

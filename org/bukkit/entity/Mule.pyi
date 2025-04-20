@@ -1,5 +1,3 @@
-# org/bukkit/entity/mule.pyi
-
 """
 Represents a Mule - variant of {@link ChestedHorse}.
 """

@@ -11,35 +11,38 @@ class Horse(Protocol):
         """
         @deprecated different variants are differing classes
         """
-        HORSE: Literal['HORSE']
-        DONKEY: Literal['DONKEY']
-        MULE: Literal['MULE']
-        UNDEAD_HORSE: Literal['UNDEAD_HORSE']
-        SKELETON_HORSE: Literal['SKELETON_HORSE']
-        LLAMA: Literal['LLAMA']
-        CAMEL: Literal['CAMEL']
+
+        HORSE: Literal["HORSE"]
+        DONKEY: Literal["DONKEY"]
+        MULE: Literal["MULE"]
+        UNDEAD_HORSE: Literal["UNDEAD_HORSE"]
+        SKELETON_HORSE: Literal["SKELETON_HORSE"]
+        LLAMA: Literal["LLAMA"]
+        CAMEL: Literal["CAMEL"]
 
     class Color:
         """
         Represents the base color that the horse has.
         """
-        WHITE: Literal['WHITE']
-        CREAMY: Literal['CREAMY']
-        CHESTNUT: Literal['CHESTNUT']
-        BROWN: Literal['BROWN']
-        BLACK: Literal['BLACK']
-        GRAY: Literal['GRAY']
-        DARK_BROWN: Literal['DARK_BROWN']
+
+        WHITE: Literal["WHITE"]
+        CREAMY: Literal["CREAMY"]
+        CHESTNUT: Literal["CHESTNUT"]
+        BROWN: Literal["BROWN"]
+        BLACK: Literal["BLACK"]
+        GRAY: Literal["GRAY"]
+        DARK_BROWN: Literal["DARK_BROWN"]
 
     class Style:
         """
         Represents the style, or markings, that the horse has.
         """
-        NONE: Literal['NONE']
-        WHITE: Literal['WHITE']
-        WHITEFIELD: Literal['WHITEFIELD']
-        WHITE_DOTS: Literal['WHITE_DOTS']
-        BLACK_DOTS: Literal['BLACK_DOTS']
+
+        NONE: Literal["NONE"]
+        WHITE: Literal["WHITE"]
+        WHITEFIELD: Literal["WHITEFIELD"]
+        WHITE_DOTS: Literal["WHITE_DOTS"]
+        BLACK_DOTS: Literal["BLACK_DOTS"]
 
     def getColor(self) -> Color:
         """

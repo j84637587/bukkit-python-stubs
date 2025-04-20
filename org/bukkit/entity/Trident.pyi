@@ -1,5 +1,3 @@
-# org/bukkit/entity/Trident.pyi
-
 """
 Represents a thrown trident.
 """

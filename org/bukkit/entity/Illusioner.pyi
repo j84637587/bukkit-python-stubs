@@ -1,5 +1,3 @@
-# org/bukkit/entity/illusioner.pyi
-
 from org.bukkit.entity import Spellcaster
 
 class Illusioner(Spellcaster):

@@ -1,5 +1,3 @@
-# org/bukkit/entity/tadpole.pyi
-
 from typing import Protocol
 
 class Fish(Protocol):

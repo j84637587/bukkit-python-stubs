@@ -1,5 +1,3 @@
-# org/bukkit/entity/marker.pyi
-
 """
 A Marker entity, exists only on the server.
 """

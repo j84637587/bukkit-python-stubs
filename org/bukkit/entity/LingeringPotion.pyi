@@ -1,5 +1,3 @@
-# org/bukkit/entity/LingeringPotion.pyi
-
 """
 Represents a thrown lingering potion bottle
 """

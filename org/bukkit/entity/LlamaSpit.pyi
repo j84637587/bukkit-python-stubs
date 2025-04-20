@@ -1,5 +1,3 @@
-# org/bukkit/entity/LlamaSpit.pyi
-
 """
 Represents Llama spit.
 """

@@ -1,5 +1,3 @@
-# org/bukkit/entity/Egg.pyi
-
 from org.bukkit.entity import ThrowableProjectile
 
 class Egg(ThrowableProjectile):

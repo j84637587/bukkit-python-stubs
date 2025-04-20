@@ -1,5 +1,3 @@
-# org/bukkit/entity/Ambient.pyi
-
 """
 Represents an ambient mob
 """
