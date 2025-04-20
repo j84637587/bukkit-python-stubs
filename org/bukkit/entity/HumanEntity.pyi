@@ -1,16 +1,24 @@
 from typing import Collection, Set, Optional
 
 from org.bukkit import GameMode, Location, Material, NamespacedKey
-from org.bukkit.inventory import Inventory, InventoryHolder, InventoryView, ItemStack, MainHand, PlayerInventory, Merchant
-from org.bukkit.inventory.meta import FireworkMeta
-from org.jetbrains.annotations import NotNull, Nullable
+from org.bukkit.inventory import (
+    Inventory,
+    InventoryHolder,
+    InventoryView,
+    ItemStack,
+    MainHand,
+    PlayerInventory,
+    Merchant,
+)
+from org.bukkit.entity import Entity, Firework
+from org.bukkit.entity import LivingEntity, AnimalTamer
 
 """
 Represents a human entity, such as an NPC or a player
 """
-class HumanEntity(LivingEntity, AnimalTamer, InventoryHolder):
 
-        def get_name(self) -> str:
+class HumanEntity(LivingEntity, AnimalTamer, InventoryHolder):
+    def get_name(self) -> str:
         """Returns the name of this player
 
         Returns:
@@ -18,7 +26,7 @@ class HumanEntity(LivingEntity, AnimalTamer, InventoryHolder):
         """
         ...
 
-        def get_inventory(self) -> PlayerInventory:
+    def get_inventory(self) -> PlayerInventory:
         """Get the player's inventory.
 
         Returns:
@@ -26,7 +34,7 @@ class HumanEntity(LivingEntity, AnimalTamer, InventoryHolder):
         """
         ...
 
-        def get_ender_chest(self) -> Inventory:
+    def get_ender_chest(self) -> Inventory:
         """Get the player's EnderChest inventory
 
         Returns:
@@ -34,7 +42,7 @@ class HumanEntity(LivingEntity, AnimalTamer, InventoryHolder):
         """
         ...
 
-        def get_main_hand(self) -> MainHand:
+    def get_main_hand(self) -> MainHand:
         """Gets the player's selected main hand
 
         Returns:
@@ -78,7 +86,7 @@ class HumanEntity(LivingEntity, AnimalTamer, InventoryHolder):
         """
         ...
 
-        def get_open_inventory(self) -> InventoryView:
+    def get_open_inventory(self) -> InventoryView:
         """Gets the inventory view the player is currently viewing. If they do not
         have an inventory window open, it returns their internal crafting view.
 
@@ -87,7 +95,7 @@ class HumanEntity(LivingEntity, AnimalTamer, InventoryHolder):
         """
         ...
 
-        def open_inventory(self, inventory: Inventory) -> Optional[InventoryView]:
+    def open_inventory(self, inventory: Inventory) -> Optional[InventoryView]:
         """Opens an inventory window with the specified inventory on the top and
         the player's inventory on the bottom.
 
@@ -100,7 +108,9 @@ class HumanEntity(LivingEntity, AnimalTamer, InventoryHolder):
         ...
 
     @Deprecated(since="1.21.4")
-        def open_workbench(self, location: Optional[Location], force: bool) -> Optional[InventoryView]:
+    def open_workbench(
+        self, location: Optional[Location], force: bool
+    ) -> Optional[InventoryView]:
         """Opens an empty workbench inventory window with the player's inventory
         on the bottom.
 
@@ -117,7 +127,9 @@ class HumanEntity(LivingEntity, AnimalTamer, InventoryHolder):
         ...
 
     @Deprecated(since="1.21.4")
-        def open_enchanting(self, location: Optional[Location], force: bool) -> Optional[InventoryView]:
+    def open_enchanting(
+        self, location: Optional[Location], force: bool
+    ) -> Optional[InventoryView]:
         """Opens an empty enchanting inventory window with the player's inventory
         on the bottom.
 
@@ -145,7 +157,7 @@ class HumanEntity(LivingEntity, AnimalTamer, InventoryHolder):
         ...
 
     @Deprecated(since="1.21.4")
-        def open_merchant(self, trader: Merchant, force: bool) -> Optional[InventoryView]:
+    def open_merchant(self, trader: Merchant, force: bool) -> Optional[InventoryView]:
         """Starts a trade between the player and the merchant.
 
         Note that only one player may trade with a merchant at once. You must use
@@ -166,7 +178,7 @@ class HumanEntity(LivingEntity, AnimalTamer, InventoryHolder):
         ...
 
     @Deprecated(since="1.9")
-        def get_item_in_hand(self) -> ItemStack:
+    def get_item_in_hand(self) -> ItemStack:
         """Returns the ItemStack currently in your hand, can be empty.
 
         Returns:
@@ -184,7 +196,7 @@ class HumanEntity(LivingEntity, AnimalTamer, InventoryHolder):
         """
         ...
 
-        def get_item_on_cursor(self) -> ItemStack:
+    def get_item_on_cursor(self) -> ItemStack:
         """Returns the ItemStack currently on your cursor, can be empty. Will
         always be empty if the player currently has no open window.
 
@@ -325,7 +337,9 @@ class HumanEntity(LivingEntity, AnimalTamer, InventoryHolder):
         """
         ...
 
-    def start_riptide_attack(self, duration: int, attack_strength: float, attack_item: Optional[ItemStack]) -> None:
+    def start_riptide_attack(
+        self, duration: int, attack_strength: float, attack_item: Optional[ItemStack]
+    ) -> None:
         """Make the player start a riptide spin attack.
 
         Args:
@@ -335,7 +349,7 @@ class HumanEntity(LivingEntity, AnimalTamer, InventoryHolder):
         """
         ...
 
-        def get_bed_location(self) -> Location:
+    def get_bed_location(self) -> Location:
         """Gets the location of the bed the player is currently sleeping in
 
         Returns:
@@ -346,7 +360,7 @@ class HumanEntity(LivingEntity, AnimalTamer, InventoryHolder):
         """
         ...
 
-        def get_game_mode(self) -> GameMode:
+    def get_game_mode(self) -> GameMode:
         """Gets this human's current GameMode
 
         Returns:
@@ -468,7 +482,7 @@ class HumanEntity(LivingEntity, AnimalTamer, InventoryHolder):
         """
         ...
 
-        def get_discovered_recipes(self) -> Set[NamespacedKey]:
+    def get_discovered_recipes(self) -> Set[NamespacedKey]:
         """Get an immutable set of recipes this entity has discovered.
 
         Returns:
@@ -477,7 +491,7 @@ class HumanEntity(LivingEntity, AnimalTamer, InventoryHolder):
         ...
 
     @Deprecated(since="1.12")
-        def get_shoulder_entity_left(self) -> Optional[Entity]:
+    def get_shoulder_entity_left(self) -> Optional[Entity]:
         """Gets the entity currently perched on the left shoulder or null if no
         entity.
 
@@ -503,7 +517,7 @@ class HumanEntity(LivingEntity, AnimalTamer, InventoryHolder):
         ...
 
     @Deprecated(since="1.12")
-        def get_shoulder_entity_right(self) -> Optional[Entity]:
+    def get_shoulder_entity_right(self) -> Optional[Entity]:
         """Gets the entity currently perched on the right shoulder or null if no
         entity.
 
@@ -657,7 +671,7 @@ class HumanEntity(LivingEntity, AnimalTamer, InventoryHolder):
         """
         ...
 
-        def get_last_death_location(self) -> Optional[Location]:
+    def get_last_death_location(self) -> Optional[Location]:
         """Gets the player's last death location.
 
         Returns:
@@ -676,7 +690,7 @@ class HumanEntity(LivingEntity, AnimalTamer, InventoryHolder):
         """
         ...
 
-        def firework_boost(self, firework_item_stack: ItemStack) -> Optional[Firework]:
+    def firework_boost(self, firework_item_stack: ItemStack) -> Optional[Firework]:
         """Perform a firework boost.
 
         This method will only work such that is_gliding() is true and
